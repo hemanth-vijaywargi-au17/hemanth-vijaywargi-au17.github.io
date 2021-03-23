@@ -1,0 +1,118 @@
+/* Styling of Body */
+body {
+  background-color:#2F0743;
+  padding: 2% 2% 2% 2%;
+  color: white;
+  /* Text color */
+  counter-reset: SerialNumber;
+}
+
+h3 {
+  text-align: center;
+  border: 1px dashed white;
+  background-color:#2F0743; /*Fallback color for browsers which don't support rgba colors (i.e, RGB colors with transparency value)*/
+  background-color:rgba(255,255,255,0.1);
+
+}
+
+#inputbox {
+  padding-left: 1%;
+  padding-right: 1%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  height: 32pt;
+  text-align: center;
+  border: 1px inset grey;
+  border-radius: 5px;
+  font-size: 16pt;
+}
+
+/* Table Styling */
+table, th, td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+table {
+  width: 100%;
+}
+
+#table1 {
+ table-layout:auto;
+ 
+}
+
+thead, tfoot, tbody td:first-child {
+  background-color:#2F0743; /*Fallback color */
+  background-color:rgba(255,255,255,0.1);
+}
+
+caption {
+  caption-side: top;
+  text-align: center;
+  color: inherit;
+  font-size: inherit;
+  border: 1px dashed white;
+ background-color:#2F0743; /*Fallback color */
+  background-color:rgba(255,255,255,0.1);
+}
+
+/* Setting counter in the first cell of last row of the table
+   & incrementing it. */
+#table1 tbody td:first-child:before {
+  counter-increment: SerialNumber;
+  content: counter(SerialNumber)".";
+  
+}
+tfoot{
+font-weight:bold;    
+}
+
+
+.button {
+  padding: 0.5%;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: blueviolet;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 0 8px silver;
+  margin: 1.5%;
+  font-weight: bold;
+  font-size: 16pt;
+  width: 20%;
+}
+
+.button:hover {
+  background-color: blueviolet;
+}
+
+.button:active {
+  background-color: blueviolet;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#by {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  border: 1px solid black;
+  padding-bottom: 1%;
+  margin-left: 1%;
+  background-color:#2F0743; /* Fallback color */
+  background-color:rgba(255,255,255,0.1);
+  color: white;
+}

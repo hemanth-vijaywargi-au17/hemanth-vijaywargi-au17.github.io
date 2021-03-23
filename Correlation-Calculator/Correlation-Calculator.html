@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Correlation Coefficient Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Files required by bootstrap (includes jQuery) -->
+  <!-- Order in which the files are linked is important -->
+  <link href="bootstrap.min.css" type="text/css" rel="stylesheet" >
+  <script src="jQuery.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+
+  <!-- Project JS & CSS-->
+  <script src="Correlation-Calculator.js"></script>
+  <link href="Correlation-Calculator.css" type="text/css" rel="stylesheet" >
+
+</head>
+
+<body>
+  <h3>Karl Pearson's Coefficient of Correlation Calculator</h3>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div id="inputbox">
+        <label for="X-values">Enter X-values Here (Give Space Between Numbers):</label><br>
+        <input id="X-values" type="text" /><br>
+
+        <label for="Y-values">Enter Y-values Here:</label><br>
+        <input id="Y-values" type="text" /><br>
+
+        <button id="Solve" class="button" type="button">Solve</button>
+        <button id="Clear" class="button" type="button">Clear</button>
+
+        <h3 id="by">
+          by Hemanth
+        </h3>
+
+
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-3 ">
+
+      <table id="Solutons">
+
+        <caption id="note">NOTE : X&#772; = (&#931;X/N) , Y&#772; = (&#931;/N) , x = (X - X&#772;) , y = (Y - Y&#772;)</caption>
+        <tr>
+          <td>(Mean of X) X&#772;</td>
+          <td id="meanOfX"></td>
+        </tr>
+        <tr>
+          <td>(Mean of Y) Y&#772;</td>
+          <td id="meanOfY"></td>
+        </tr>
+
+        <tr>
+          <td>Karl Pearson's Co-efficient of Correlation (r)</td>
+          <td id="R"></td>
+        </tr>
+
+        <tr>
+          <td>Probable Error</td>
+          <td id="PE"></td>
+        </tr>
+
+        <tr>
+          <td>Upper Limit / Lower Limit of r (UL / LL)</td>
+          <td id="UL_LL"></td>
+        </tr>
+
+        <tr>
+          <td>The Correlation is</td>
+          <td id="sig"></td>
+        </tr>
+      </table>
+
+
+    </div>
+
+    <div class="container-fluid ">
+      <table id="table1">
+        <caption>
+          <h5>SOLUTION TABLE</h5>
+        </caption>
+
+        <thead>
+          <tr>
+            <th>N</th>
+            <th>X</th>
+            <th>Y</th>
+            <th>x</th>
+            <th>y</th>
+            <th>x<sup>2</sup></th>
+            <th>y<sup>2</sup></th>
+            <th>x<small>&times;</small>y</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td></td>
+            <td class="X"></td>
+            <td class="Y"></td>
+            <td class="x"></td>
+            <td class="y"></td>
+            <td class="xsqr"></td>
+            <td class="ysqr"></td>
+            <td class="xy"></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="X"></td>
+            <td class="Y"></td>
+            <td class="x"></td>
+            <td class="y"></td>
+            <td class="xsqr"></td>
+            <td class="ysqr"></td>
+            <td class="xy"></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="X"></td>
+            <td class="Y"></td>
+            <td class="x"></td>
+            <td class="y"></td>
+            <td class="xsqr"></td>
+            <td class="ysqr"></td>
+            <td class="xy"></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="X"></td>
+            <td class="Y"></td>
+            <td class="x"></td>
+            <td class="y"></td>
+            <td class="xsqr"></td>
+            <td class="ysqr"></td>
+            <td class="xy"></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="X"></td>
+            <td class="Y"></td>
+            <td class="x"></td>
+            <td class="y"></td>
+            <td class="xsqr"></td>
+            <td class="ysqr"></td>
+            <td class="xy"></td>
+          </tr>
+
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td id="N">&#931;</td>
+            <td id="sumOfX"></td>
+            <td id="sumOfY"></td>
+            <td id="sumOfx"></td>
+            <td id="sumOfy"></td>
+            <td id="sumOfxsqr"></td>
+            <td id="sumOfysqr"></td>
+            <td id="sumOfxy"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
